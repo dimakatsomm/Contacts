@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContactManager</name>
+    </assembly>
+    <members>
+        <member name="T:ContactManager.Controllers.ContactController">
+            <summary>
+            Contact service controller
+            </summary>
+        </member>
+        <member name="M:ContactManager.Controllers.ContactController.#ctor(ContactManager.Services.ContactService,Microsoft.Extensions.Logging.ILogger{ContactManager.Controllers.ContactController})">
+            <summary>
+            Contact service controller
+            </summary>
+        </member>
+        <member name="M:ContactManager.Controllers.ContactController.Get">
+            <summary>
+            Get a list of all existing contacts
+            </summary>
+            <returns>A list of all contacts</returns>
+        </member>
+        <member name="M:ContactManager.Controllers.ContactController.Post(ContactManager.Models.Contact)">
+            <summary>
+            Creates a new contact
+            </summary>
+            <returns>New contact with Status code 201</returns>
+        </member>
+        <member name="M:ContactManager.Controllers.ContactController.Patch(System.String,ContactManager.Models.Contact)">
+            <summary>
+            Updates and existing contact
+            </summary>
+            <returns>Updated contact with Status code 200</returns>
+        </member>
+        <member name="M:ContactManager.Controllers.ContactController.AddContactToFavourites(System.String)">
+            <summary>
+            Flags/Unflags a contact as a favourite
+            </summary>
+            <returns>Status code 200</returns>
+        </member>
+        <member name="M:ContactManager.Controllers.ContactController.Delete(System.String)">
+            <summary>
+            Delete an existing contact
+            </summary>
+            <returns>Status code 204</returns>
+        </member>
+        <member name="T:ContactManager.Data.IUpdateContactDto">
+            <summary>
+            Update Contact Request Data
+            </summary>
+        </member>
+        <member name="P:ContactManager.Data.IUpdateContactDto.name">
+            <summary>
+            Name of contact
+            </summary>
+        </member>
+        <member name="P:ContactManager.Data.IUpdateContactDto.email">
+            <summary>
+            Email of contact
+            </summary>
+        </member>
+        <member name="P:ContactManager.Data.IUpdateContactDto.phone">
+            <summary>
+            Phone number of contact
+            </summary>
+        </member>
+        <member name="P:ContactManager.Data.IUpdateContactDto.company">
+            <summary>
+            Company name of contact
+            </summary>
+        </member>
+        <member name="P:ContactManager.Data.IUpdateContactDto.notes">
+            <summary>
+            Additional notes about the contact
+            </summary>
+        </member>
+        <member name="T:ContactManager.Data.ICreateContactDto">
+            <summary>
+            Create Contact Request Data
+            </summary>
+        </member>
+        <member name="P:ContactManager.Data.ICreateContactDto.favourite">
+            <summary>
+            Flag if a contact is favourite or not
+            </summary>
+        </member>
+        <member name="T:ContactManager.Models.Contact">
+            <summary>
+            Contact Manager Models
+            </summary>
+        </member>
+        <member name="T:ContactManager.Models.MongoDBSettings">
+            <summary>
+            Service to manage contacts
+            </summary>
+        </member>
+        <member name="T:ContactManager.Services.IContactService">
+            <summary>
+            Contact repository interface
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.IContactService.GetListAsync">
+            <summary>
+            Get contact list service interface
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.IContactService.CreateAsync(ContactManager.Models.Contact)">
+            <summary>
+            Create contact service interface
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.IContactService.UpdateAsync(System.String,ContactManager.Models.Contact)">
+            <summary>
+            Update contact service interface
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.IContactService.AddContactToFavouritesAsync(System.String)">
+            <summary>
+            Flag contact as favourite interface
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.IContactService.DeleteAsync(System.String)">
+            <summary>
+            Delete contact service interface
+            </summary>
+        </member>
+        <member name="T:ContactManager.Services.ContactService">
+            <summary>
+            Service to manage contacts
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.ContactService.#ctor(Microsoft.Extensions.Options.IOptions{ContactManager.Models.MongoDBSettings})">
+            <summary>
+            Service to manage contacts
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.ContactService.GetListAsync">
+            <summary>
+            Get a list of all existing contacts
+            </summary>
+            <returns>A list of all contacts</returns>
+        </member>
+        <member name="M:ContactManager.Services.ContactService.CreateAsync(ContactManager.Models.Contact)">
+            <summary>
+            Creates a new contact
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.ContactService.UpdateAsync(System.String,ContactManager.Models.Contact)">
+            <summary>
+            Updates and existing contact
+            </summary>
+            <returns>An updated contact</returns>
+        </member>
+        <member name="M:ContactManager.Services.ContactService.AddContactToFavouritesAsync(System.String)">
+            <summary>
+            Flags a contact as a favourite
+            </summary>
+        </member>
+        <member name="M:ContactManager.Services.ContactService.DeleteAsync(System.String)">
+            <summary>
+            Delete an existing contact
+            </summary>
+        </member>
+    </members>
+</doc>
